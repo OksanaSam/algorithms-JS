@@ -1,0 +1,18 @@
+       //  Find the smallest duplicate in an array of numbers
+          const arr = [1, 3, 4, 2, 4, 4, 2];
+
+          const findSmallestDuplicate = (array) => {
+              const obj = {};
+              let smallestDuplicate = null;
+              for (let element of array) {
+                  if (obj[element]) {
+                      if (smallestDuplicate === null || element < smallestDuplicate ) {
+                          smallestDuplicate = element;
+                      }
+                  };
+                  obj[element] = true;
+              }
+              return smallestDuplicate !== null ? smallestDuplicate : -1;
+          };
+
+         findSmallestDuplicate(arr);
