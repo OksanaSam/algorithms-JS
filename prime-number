@@ -1,4 +1,6 @@
      // Check if a number is prime
+     //https://whatis.techtarget.com/definition/prime-number
+     //////////////////////////////////////////////////////
      
      function isPrime(num) {
         if (num === 0 || num === 1) {
