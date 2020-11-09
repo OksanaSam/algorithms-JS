@@ -1,0 +1,17 @@
+// FizzBuzz with recursion running upwards
+// Write a function that prints the numbers from 1 to 100.
+// For multiples of three print “Fizz” instead of the number and for multiples of five print “Buzz” instead of the number.
+// For numbers which are multiples of both three and five print “FizzBuzz”.
+
+const fizzBuzz = (randomNum, counter = 1) => {
+        if (counter > randomNum) return;
+        
+        if (counter  % 5 === 0 && counter  % 3 === 0) console.log('FizzBuzz');
+        else if (counter % 5 === 0) console.log('Fizz');
+        else if (counter  % 3 === 0) console.log('Buzz');
+        else console.log(counter);
+
+    return fizzBuzz(randomNum, counter + 1);
+};
+
+fizzBuzz(100);
